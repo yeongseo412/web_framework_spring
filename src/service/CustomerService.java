@@ -22,4 +22,14 @@ public class CustomerService {
 	public void addCustomer (Customer customer) {
 		customers.put(customer.getId(), customer);
 	}
+	
+	public Customer login(String id, String password) {
+		
+		if(id != null) {
+			return customers.get(id.toLowerCase());
+		}
+		else {
+			return null;
+		}
+	}
 }

@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>Register Success</title>
 </head>
 <body>
-
+	Congratulation! You can do this page!
 </body>
 </html>
