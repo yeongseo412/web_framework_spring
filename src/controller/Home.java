@@ -39,7 +39,7 @@ public class Home extends HttpServlet {
 			page = "/view/registerForm.jsp";
 		}
 		else {
-			page = "view/error.jsp";
+			page = "/view/error.jsp";
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(page);

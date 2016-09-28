@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>Login Success</title>
 </head>
 <body>
-
+	Welcome! <br>
+	
+	${customer.id} <br>
+	${customer.name} <br>
+	${customer.email} <br>
+	
 </body>
 </html>

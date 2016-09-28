@@ -7,6 +7,8 @@
 <title>Register Success</title>
 </head>
 <body>
-	Congratulation! You can do this page!
+	Congratulation! You can use this page!
+	
+	<p><a href="/homeworkLogin">go to home page</a></p>
 </body>
 </html>

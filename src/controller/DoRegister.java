@@ -1,8 +1,7 @@
 package controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Customer;
+import service.CustomerService;
 
 /**
  * Servlet implementation class DoRegister
@@ -39,11 +39,19 @@ public class DoRegister extends HttpServlet {
 		String customerGender = request.getParameter("gender");
 		String customerEmail = request.getParameter("email");
 	
-		List<Customer> customers = new ArrayList<>();
-		customers.add(new Customer(customerId, customerPassword, customerName, customerGender, customerEmail));
-		request.setAttribute("customerList", customers);
+		// perform business logic. Return a bean as a result.
+		CustomerService service = (CustomerService) CustomerService.getInstance();
+		Customer customer = new Customer(customerId, customerPassword, customerName, customerGender, customerEmail);
 		
-		String page = "/view/registerSuccess.jsp";
+		String page;
+		
+		if(service.findCustomer(customerId) == null) {
+			service.addCustomer(customer);
+			page = "/view/registerSuccess.jsp";
+		}
+		else {
+			page = "/view/registerFail.jsp";
+		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(page);
 		dispatcher.forward(request, response);
