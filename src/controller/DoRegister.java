@@ -48,6 +48,8 @@ public class DoRegister extends HttpServlet {
 		if(service.findCustomer(customerId) == null) {
 			service.addCustomer(customer);
 			page = "/view/registerSuccess.jsp";
+			
+			request.setAttribute("customer", customer);
 		}
 		else {
 			page = "/view/registerFail.jsp";

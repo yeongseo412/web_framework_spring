@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Login Success</title>
+<title>Register Fail</title>
 </head>
 <body>
-	<h2> Welcome! </h2>
-	<h3> ${customer.name} logged in successfully! </h3>
+	Fail!
 </body>
 </html>

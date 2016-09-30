@@ -7,7 +7,15 @@
 <title>Register Success</title>
 </head>
 <body>
-	Congratulation! You can use this page!
+	<h3>You registered successfully.</h3>
+	
+	<ul>
+		<li>id : ${customer.id}</li>
+		<li>password : ${customer.password}</li>
+		<li>gender : ${customer.gender}</li>
+		<li>Name : ${customer.name}</li>
+		<li>Email : ${customer.email}</li>
+	</ul>
 	
 	<p><a href="/homeworkLogin">go to home page</a></p>
 </body>
